@@ -1,6 +1,6 @@
 b.sqlite3
 *.pyc
-
+djangoApps.txt
 ##################################################################
 
 #from https://github.com/django/django/blob/main/.gitignore:
