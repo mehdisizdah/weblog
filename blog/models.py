@@ -12,3 +12,11 @@ class Post(models.Model):
     created=models.DateTimeField(auto_now_add=True )
     updated=models.DateTimeField(auto_now=True)
     publish=models.DateTimeField(default=timezone.now)
+    slug=models.SlugField(max_length=100 )
+    image=models.ImageField()
+    
+    def __str__(self):
+        return self.title
+    
+    def snippet(self):
+        return self.description[:30]+'...'

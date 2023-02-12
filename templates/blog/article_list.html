@@ -1,11 +1,18 @@
-{%for i in articles%}
+{%for i in object_list%}
 <div>
     <h3> 
         {{i.title  }}
     </h3> 
 </div>
-<div>
-    {{i.description}}
-</div>
 <br>
+<div>
+    <img src="{{i.image.url}}" 
+    {{i.tqitle}}
+    
+    print({{MEDIA_URL}})
+    <br>
+    {{i.description | truncatewords:20}}
+</div>
+<hr>
+
 {%endfor%}
