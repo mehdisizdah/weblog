@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     'blog',
-    'account.apps.AccountConfig'#'account',
+    'account.apps.AccountConfig', #'account',
+    'comment', #3rd party
 ]
 
 MIDDLEWARE = [

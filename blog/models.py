@@ -2,6 +2,8 @@ from django.db import models
 from account.models import User
 from django.utils import timezone
 # from datetime import datetime
+from django.contrib.contenttypes.fields import GenericRelation
+from comment.models import Comment
 
 # Create your models here.
 
@@ -14,6 +16,7 @@ class Post(models.Model):
     publish=models.DateTimeField(default=timezone.now)
     slug=models.SlugField(max_length=100 )
     image=models.ImageField()
+    comments=GenericRelation(Comment)
     
     def __str__(self):
         return self.title

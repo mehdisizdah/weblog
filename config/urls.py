@@ -23,6 +23,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/',include('blog.urls')),
     path('account/',include('account.urls')),
+    
+    path('comment/', include('comment.urls')),
+    # path('api/', include('comment.api.urls')),  # only required for API Framework
 ]
 
 if settings.DEBUG:
